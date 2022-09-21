@@ -2,10 +2,10 @@
 // swiper js code
 
 var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 2,
-    spaceBetween: 30,
+    slidesPerView: 3,
+    spaceBetween:20,
     autoplay: {
-        delay: 2500,
+        delay: 4500,
         disableOnInteraction: false,
     },
     pagination: {
@@ -13,3 +13,14 @@ var swiper = new Swiper(".mySwiper", {
         clickable: true,
     },
 });
+
+// navbar toggle
+
+const mobileNav = document.querySelector('.mobile-navbar-btn');
+const navHeader = document.querySelector('.header');
+
+const toggleNavbar = () =>{
+    navHeader.classList.toggle('active');
+}
+
+mobileNav.addEventListener('click', ()=>toggleNavbar());
